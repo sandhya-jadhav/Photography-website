@@ -1,0 +1,13 @@
+/* styles.css */
+
+.card {
+    height: 200px; /* Adjust the desired fixed height for the card */
+    overflow: hidden; /* Hide any overflow content */
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the fixed height */
+}
+

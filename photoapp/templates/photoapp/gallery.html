@@ -1,0 +1,44 @@
+<!-- gallery.html -->
+
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+{% comment %} <div class="container mt-4 transparent-bg">
+  <div class="row row-cols-1 row-cols-md-4 g-4">
+    {% for photo in photos %}
+    <div class="col">
+      <div class="card h-100">
+        <img
+          src="{{ photo.image.url }}"
+          class="card-img-top fixed-height-img"
+          alt="{{ photo.title }}"
+        />
+        <div class="card-body">
+          {% comment %}
+          <h5 class="card-title">{{ photo.title }}</h5>
+          {% endcomment %}
+          <!-- Add any other details you want to display -->
+{% comment %}            
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div> {% endcomment %} 
+
+
+<div class="container-fluid mt-4 ">
+    <div class="row">
+        {% for photo in photos %}
+        <div class="col-md-3 mb-4">
+            <div class="card bg-transparent">
+                <img src="{{ photo.image.url }}" class="card-img " alt="{{ photo.title }}">
+                <div class="card-body">
+                    {% comment %} <h5 class="card-title">{{ photo.title }}</h5> {% endcomment %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
