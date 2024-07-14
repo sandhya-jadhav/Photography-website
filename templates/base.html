@@ -1,0 +1,63 @@
+{% load static %}
+
+<!-- base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Django Project</title>
+    <!-- Bootstrap CSS via CDN -->
+    <link rel="stylesheet" href="{% static 'photoapp/css/styles.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: black; 
+            color: white; 
+        }
+        .company-name {
+            color: red; 
+        }
+        .navbar, .footer {
+            background-color: black;
+        }
+
+        /* style.css */
+
+/* Navbar styles */
+.navbar {
+    font-family: 'Roboto', sans-serif; /* Replace 'Roboto' with your desired font */
+    font-weight: 400; /* Adjust font weight as needed */
+}
+
+.navbar-brand {
+    font-size: 1.5rem; /* Adjust font size for the brand/logo */
+}
+
+.navbar-nav .nav-link {
+    font-size: 1rem; /* Adjust font size for navbar links */
+}
+
+    </style>
+
+</head>
+<body>
+    <!-- Include header -->
+    {% include 'header.html' %}
+
+    <!-- Main content area -->
+        {% block content %}
+        <!-- Content specific to each page -->
+        {% endblock %}
+
+    <!-- Include footer -->
+    {% include 'footer.html' %}
+
+    <!-- Bootstrap JS (Optional for dropdowns, toggles, etc.) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
